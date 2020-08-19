@@ -1,0 +1,152 @@
+*{
+    &, &::after, &::before{
+        box-sizing: border-box;
+    }
+}
+body{
+    background-color: #333;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .clock{
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 45vh;
+        background-color: black;
+        border: 20px solid #444;
+        border-radius: 20px;
+        .clockNumber{
+            position: absolute;
+            &.colon{
+                width: 3%;
+                height: 30%;
+                position: relative;
+                background-color: red;
+                &::before{
+                    content: '';
+                    left: -5px;
+                    position: absolute;
+                    min-width: 1000%;
+                    height: 50%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: black;
+                }
+            }
+            &:not(.colon){
+                width: 20%;
+                height: 80%;
+                .segment{
+                    border-radius: 15px;
+                    position: absolute;
+                }
+                .segmentA, .segmentD, .segmentG{
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 75%;
+                    height: 10%;
+                }
+                .segmentB, .segmentC, .segmentE, .segmentF{
+                    height: 35%;
+                    width: 1.5vw;
+                    top: 10%;
+                }
+                .segmentB, .segmentC{
+                    right: 0;
+                }
+                .segmentC, .segmentE{
+                    top: 55%;
+                }
+                .segmentD{
+                    bottom: 0;
+                }
+                .segmentG{
+                    top: 45%;
+                }
+                &.number1{
+                    left: 2.75%;
+                }
+                &.number2{
+                    left: 26%;
+                }
+                &.number3{
+                    right: 26%;
+                }
+                &.number4{
+                    right: 2.75%;
+                }
+            }
+        }
+    }
+}
+
+@media (orientation: portrait){
+
+    body .clock{
+        width: 85%;
+        height: 30vh;
+        .clockNumber{
+            &:not(.colon){
+                .segmentB, .segmentC, .segmentE, .segmentF{
+                    width: calc(.08 * 22vh);
+                }
+            }
+        }
+    }
+    
+}
+
+@media (min-aspect-ratio: 7/9) and (max-aspect-ratio: 10/9){
+    
+    body .clock{
+        width: 65%;
+        height: 30vh;
+        .clockNumber{
+            &:not(.colon){
+                .segmentB, .segmentC, .segmentE, .segmentF{
+                    width: calc(.08 * 22vh);
+                }
+            }
+        }
+    }
+    
+}
+
+@media (min-aspect-ratio: 10/9) and (max-aspect-ratio: 12/9){
+    
+    body .clock{
+        width: 65%;
+        height: 40vh;
+        .clockNumber{
+            &:not(.colon){
+                .segmentB, .segmentC, .segmentE, .segmentF{
+                    width: calc(.08 * 30vh);
+                }
+            }
+        }
+    }
+    
+}
+
+@media (min-aspect-ratio: 12/9) and (max-aspect-ratio: 14/9){
+    
+    body .clock{
+        width: 60%;
+        height: 40vh;
+        .clockNumber{
+            &:not(.colon){
+                .segmentB, .segmentC, .segmentE, .segmentF{
+                    width: calc(.08 * 30vh);
+                }
+            }
+        }
+    }
+    
+}
