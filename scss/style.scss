@@ -92,11 +92,9 @@ body{
     body .clock{
         width: 85%;
         height: 30vh;
-        .clockNumber{
-            &:not(.colon){
-                .segmentB, .segmentC, .segmentE, .segmentF{
-                    width: calc(.08 * 22vh);
-                }
+        .clockNumber:not(.colon){
+            .segmentB, .segmentC, .segmentE, .segmentF{
+                width: calc(.08 * 22vh);
             }
         }
     }
@@ -108,11 +106,9 @@ body{
     body .clock{
         width: 65%;
         height: 30vh;
-        .clockNumber{
-            &:not(.colon){
-                .segmentB, .segmentC, .segmentE, .segmentF{
-                    width: calc(.08 * 22vh);
-                }
+        .clockNumber:not(.colon){
+            .segmentB, .segmentC, .segmentE, .segmentF{
+                width: calc(.08 * 22vh);
             }
         }
     }
@@ -124,11 +120,9 @@ body{
     body .clock{
         width: 65%;
         height: 40vh;
-        .clockNumber{
-            &:not(.colon){
-                .segmentB, .segmentC, .segmentE, .segmentF{
-                    width: calc(.08 * 30vh);
-                }
+        .clockNumber:not(.colon){
+            .segmentB, .segmentC, .segmentE, .segmentF{
+                width: calc(.08 * 30vh);
             }
         }
     }
@@ -140,11 +134,9 @@ body{
     body .clock{
         width: 60%;
         height: 40vh;
-        .clockNumber{
-            &:not(.colon){
-                .segmentB, .segmentC, .segmentE, .segmentF{
-                    width: calc(.08 * 30vh);
-                }
+        .clockNumber:not(.colon){
+            .segmentB, .segmentC, .segmentE, .segmentF{
+                width: calc(.08 * 30vh);
             }
         }
     }
